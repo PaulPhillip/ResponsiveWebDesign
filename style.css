@@ -1,0 +1,461 @@
+:root {
+    --primary: #FD6B0D;
+    --secondary: #1D1E2A;
+    --hintergrund: #ccc;
+}
+
+@font-face {
+    font-family: 'Saya FY';
+    src: url('fonts/SayaFY-Regular.eot');
+    src: url('fonts/SayaFY-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/SayaFY-Regular.woff2') format('woff2'), url('fonts/SayaFY-Regular.woff') format('woff'), url('fonts/SayaFY-Regular.ttf') format('truetype'), url('fonts/SayaFY-Regular.svg#Saya FY') format('svg');
+}
+
+@font-face {
+    font-family: 'Saya Serif';
+    src: url('fonts/SayaSerifFY-Md.eot');
+    src: url('fonts/SayaSerifFY-Md.eot?#iefix') format('embedded-opentype'), url('fonts/SayaSerifFY-Md.woff2') format('woff2'), url('fonts/SayaSerifFY-Md.woff') format('woff'), url('fonts/SayaSerifFY-Md.ttf') format('truetype'), url('fonts/SayaSerifFY-Md.svg#Saya Serif FY Md ') format('svg');
+}
+
+body {
+    font-family: 'Saya FY';
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+h2 {
+    font-size: 18px;
+    font-family: 'Saya FY';
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+h3 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-family: 'Saya Serif'
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+.hero-content {
+    padding: 2rem;
+}
+
+p {
+    line-height: 28px;
+}
+
+.hero-contentbox {
+    position: absolute;
+    top: 50%;
+    max-width: 592px;
+    background: transparent;
+    left: calc(50% - 22px);
+    transform: translateX(-100%) translateY(-50%);
+}
+
+.hero img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.hero-footer {
+    line-height: 3.5;
+    padding: 0 2em;
+}
+
+
+/* .hero-contentbox div {
+    padding: 0 2rem;
+    opacity: 0;
+    animation-name: opacitychange;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+} */
+
+.hero-contentbox::before {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    animation-name: heightanim;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.hero-contentbox .hero-footer a {
+    color: var(--primary);
+    font-family: 'Saya FY';
+}
+
+.strich {
+    line-height: 3.5;
+    margin: 0;
+    padding: 0 2em;
+}
+
+.strichanimation {
+    opacity: 0;
+    /* animation: 800ms ease 2490ms 1 normal forwards running colorchange;
+    animation: 40ms linear 2610ms 1 normal forwards running opacitychange, 240ms ease-out 2610ms 1 normal running widthchange; */
+}
+
+.strich::before {
+    position: absolute;
+    content: '';
+    background-color: var(--primary);
+    display: block;
+    height: 8px;
+    width: 60px;
+    top: -4px;
+    opacity: 0;
+    animation: 40ms linear 2610ms 1 normal forwards running opacitychange, 240ms ease-out 2610ms 1 normal running widthchange;
+}
+
+.cta-animation {
+    opacity: 0;
+    animation: 1720ms ease 2530ms 1 normal forwards running opacitychange, 1120ms ease 2370ms 1 normal running smalltextmove;
+}
+
+.cta-animation2 {
+    opacity: 0;
+    /* animation: 720ms ease 1200ms 1 normal forwards running opacitychange, 720ms ease 1200ms 1 running smalltextmove; */
+}
+
+.text-animation2 {
+    opacity: 0;
+    /* animation: 720ms ease 1160ms 1 normal forwards running opacitychange, 720ms ease 1160ms 1 running smalltextmove; */
+}
+
+.text-animation {
+    opacity: 0;
+    animation: 1720ms ease 2530ms 1 normal forwards running opacitychange, 1120ms ease 2370ms 1 normal running smalltextmove;
+}
+
+.second-section {
+    background-color: var(--secondary);
+}
+
+.img-left {
+    width: 50%;
+    max-width: 592px;
+    margin-left: auto;
+    margin-right: 22px;
+    padding-left: 105px;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.animation-imgleft {
+    transform-origin: right center;
+    background-color: rgb(216, 210, 203);
+    transform: translateX(-300%);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+}
+
+.animation-imgleft {
+    animation: 480ms ease 0ms 1 normal forwards running xtranslate, 560ms ease 520ms 1 running widthchange2;
+}
+
+.animation-imgleft-img {
+    opacity: 0;
+    animation: 440ms linear 640ms 1 normal forwards running opacitychange, 2080ms ease-out 1120ms 1 running scaleanimation;
+}
+
+.position-container-imgleft {
+    width: 100%;
+    position: relative;
+}
+
+.img-left img {
+    max-width: 592px;
+    width: 100%;
+}
+
+.content-right {
+    width: 50%;
+    align-self: center;
+    padding-right: 105px;
+}
+
+.content-header {
+    position: relative;
+}
+
+.content-header h2 {
+    font-size: 20px;
+    font-family: 'Saya FY';
+    margin-bottom: 46px;
+}
+
+.content-header h2::after {
+    position: absolute;
+    content: '';
+    background-color: var(--primary);
+    display: block;
+    height: 8px;
+    width: 60px;
+    bottom: -16px;
+    left: -50px;
+}
+
+.content-body h3 {
+    font-size: 22px;
+    font-family: 'Saya FY';
+}
+
+.content-footer a {
+    color: var(--primary);
+    font-family: 'Saya FY';
+}
+
+#main-image {
+    opacity: 0;
+}
+
+.content-anim {
+    padding: 0 105px;
+}
+
+.h2-zweitesection-animation {
+    color: rgba(255, 255, 255, 0);
+    animation: 320ms ease 1120ms 1 normal forwards running textshadow;
+}
+
+.content-right h2:after {
+    opacity: 0;
+    animation: 40ms linear 960ms 1 normal forwards running opacitychange, 320ms ease-out 960ms 1 running widthchange;
+}
+
+@-webkit-keyframes scaleanimation {
+    0% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
+    }
+}
+
+@keyframes scaleanimation {
+    0% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
+    }
+}
+
+@-webkit-keyframes widthchange2 {
+    0% {
+        width: 300%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes widthchange2 {
+    0% {
+        width: 300%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+@-webkit-keyframes xtranslate {
+    0% {
+        -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+
+@keyframes xtranslate {
+    0% {
+        -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+
+@keyframes shortmove {
+    0% {
+        -webkit-transform: translateX(-5px);
+        -ms-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes opacitychange {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        color: rgba(0, 0, 0, 1);
+    }
+}
+
+@keyframes widthchange {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 60px;
+    }
+}
+
+@-webkit-keyframes smalltextmove {
+    0% {
+        -webkit-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes smalltextmove {
+    0% {
+        -webkit-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes textshadow {
+    0% {
+        color: rgba(255, 255, 255, 0);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0);
+    }
+    100% {
+        color: rgba(255, 255, 255, 1);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@keyframes textshadow {
+    0% {
+        color: rgba(255, 255, 255, 0);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0);
+    }
+    100% {
+        color: rgba(255, 255, 255, 1);
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.overlay-animate {
+    animation-duration: 1000ms, 2000ms;
+    animation-timing-function: ease, ease;
+    animation-delay: 850ms, 1850ms;
+    animation-iteration-count: 1, 1;
+    animation-direction: normal, normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running, running;
+    animation-name: movewithopacity, opacityreverse;
+}
+
+#animation-overlay {
+    background-color: rgb(216, 210, 203);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+@keyframes opacityreverse {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes heightanim {
+    0% {
+        height: 0%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+@keyframes movewithopacity {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}

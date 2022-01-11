@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Saya Serif FY Md ';
+    src: url('fonts/SayaSerifFY-Md.eot');
+    src: url('fonts/SayaSerifFY-Md.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SayaSerifFY-Md.woff2') format('woff2'),
+         url('fonts/SayaSerifFY-Md.woff') format('woff'),
+         url('fonts/SayaSerifFY-Md.ttf')  format('truetype'),
+         url('fonts/SayaSerifFY-Md.svg#Saya Serif FY Md ') format('svg');
+}
