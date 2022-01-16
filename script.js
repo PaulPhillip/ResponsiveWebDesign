@@ -36,22 +36,26 @@ const callback = (entries) => {
                 //of the element
                 entry.target.style.animation =
                     entry.target.dataset.animate;
+                document.documentElement.style.setProperty = ("--animation-contentbox", "heightanim 1s 2s forwards");
+
             } else {
                 //We take of the animation if not in view
                 entry.target.style.animation = "none";
+                document.documentElement.style.setProperty = ("--animation-contentbox", "widthchange 1s 2s forwards");
+
             }
         }
     );
 }
 
 
-
 let observer = new IntersectionObserver(callback);
 
 
 
-
 const animationItems = document.querySelectorAll('.animate');
+
+
 
 
 //3]Loop through selected elements and add to the
